@@ -1,42 +1,99 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react'
+import {
+    Box,
+    List,
+    ListItem,
+    Link,
+    Flex
+} from '@chakra-ui/core'
+import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+const Header = () => {
+    return (
+
+            <Flex
+            justifyContent="space-between"
+            alignItems='center'
+            pt={6}
+            px={16}
+
+            >
+            
+                <Logo />
+
+                <Flex alignItems='center'>
+
+                    <Nav />
+
+                    <ColorModeSwitcher />
+
+                </Flex>
+
+            </Flex>
+
+    )
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header
+
+const Logo = () => {
+
+    return (
+        <Box
+        h="51px"
+        w="60px"
+        bgColor="mainBlue"
+        borderRadius="5px"
+        paddingTop="20px"
+        paddingLeft="10px"
+        fontFamily="themeMono"
+        color="#fff"
+        fontSize="1.1rem"
+        fontWeight="bold"
+        _hover={{bgColor: '#ff8075'}}
+        cursor="pointer"
+        transition="0.2s all ease"
+        >
+            J
+        </Box>
+    )
+}
+
+const Nav = () => {
+    const navItems = [
+        {
+            name: 'Work',
+            href: '/'
+        },
+        {
+            name: 'Bookshelf',
+            href: '/'
+        },
+        {
+            name: 'Contact',
+            href: '/'
+        },
+    ]
+
+    return (
+        <List
+        fontFamily="themeMono"
+        pr={10}
+        >
+        {navItems.map(i => (
+            <Link
+            key={i}
+            href={i.href}
+            ml={8}
+            >
+                <ListItem
+                display="inline-block"
+                _hover={{color: '#7d7f81'}}
+                >
+                    {i.name}
+                </ListItem>
+            </Link>
+        ))}
+        </List>
+    )
+}

@@ -1,51 +1,43 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
+import React from 'react'
+import Header from './header'
+import { Box, Flex } from '@chakra-ui/core'
+import './layout.css'
+import SocialIcons from './socialIcons'
+import { customTheme } from '../App'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+    return (
+        <>
+            <Header />
+            
+            <Box
+            as='main'
+            pt='5rem'
+            px='15vw'
+            h="200vh"
+            >
+                {children}
+            </Box>
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
-}
+            <Flex
+            position="fixed"
+            left={16}
+            bottom={0}
+            alignItems="center"
+            flexDirection="column"
+            >
+                <SocialIcons />
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+                <Box
+                h={16}
+                w={0}
+                mt={10}
+                borderLeft="3px solid"
+                borderColor={customTheme.colors.mainBlue}
+                />
+            </Flex>
+        </>
+    )
 }
 
 export default Layout
