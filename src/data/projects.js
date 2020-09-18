@@ -10,7 +10,7 @@ export const projects = [
         desc: 'a local home renovation company website, with contact form, photo galleries, programmatically generated pages & page sections, and connected to prismic cms for easy content entry.',
         live: 'https://practicalreno.com/',
         gitHub: 'https://github.com/jmilani224/practical-renovations',
-        tools: ['gatsby', 'react', 'chakra ui', 'prismic cms'],
+        tools: ['gatsby', 'react', 'graphql', 'chakra ui', 'prismic cms'],
         imgSrc: practicalReno,
     },
     {
@@ -18,7 +18,7 @@ export const projects = [
         desc: 'lakewood, ohio, hair salon website, with embedded booking widget, simple design, and uses netlify cms for easy content entry.',
         live: 'https://emeraldroomsalon.com/',
         gitHub: 'https://github.com/jmilani224/emerald-room',
-        tools: ['gatsby', 'react', 'netlify cms'],
+        tools: ['gatsby', 'react', 'graphql', 'netlify cms'],
         imgSrc: emeraldRoom,
     },
     {

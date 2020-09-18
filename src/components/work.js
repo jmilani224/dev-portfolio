@@ -61,6 +61,7 @@ const ProjectInfo = () => {
                 </Text>
                 <Flex
                 direction='row'
+                flexWrap='wrap'
                 mt={4}
                 >
                     {i.tools.map(x => (
