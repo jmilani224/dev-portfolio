@@ -1,0 +1,161 @@
+import React from 'react'
+import { Heading1 } from './headings.js'
+import { Box, Flex, Heading, Text, Button, useColorModeValue, Image, Link } from '@chakra-ui/core'
+import { GithubIcon, LinkIcon } from '../svgs/icons'
+import { projects } from '../data/projects.js'
+
+export const Work = () => {
+    console.log(projects)
+    return (
+        <>
+        <Box h={24} />
+        <Heading1 text='Selected Projects' />
+
+        <ProjectInfo />
+
+
+        </>
+    )
+}
+
+const ProjectInfo = () => {
+
+    return projects.map(i => (
+
+        <Flex
+        direction={{base: "column", lg: "row"}}
+        my={24}
+        alignItems='center'
+        justifyContent='space-between'
+        >
+            <Flex
+            direction="column"
+            >
+                <Heading
+                as='h2'
+                fontFamily='themeMono'
+                fontSize='2rem'
+                mb={8}
+                >
+                    {i.name}
+                </Heading>
+
+                <Text
+                fontFamily='themeMono'
+                >
+                    {i.desc}
+                </Text>
+
+                <Link href={i.live}>
+                    <SmallButton text='demo' icon={<LinkIcon />} />
+                </Link>
+                <Link href={i.gitHub}>
+                    <SmallButton text='github' icon={<GithubIcon />} />
+                </Link>
+
+                <Text
+                fontWeight='600'
+                fontSize='0.8rem'
+                fontFamily='themeMono'
+                mt={12}
+                >
+                    toolbox
+                </Text>
+                <Flex
+                direction='row'
+                mt={4}
+                >
+                    {i.tools.map(x => (
+                    <Text
+                    mr={6}
+                    fontWeight='400'
+                    fontSize='0.8rem'
+                    fontFamily='themeMono'
+                    color='#a9aaab'
+                    >
+                        {x}
+                    </Text>
+                    ))}
+                </Flex>
+            </Flex>
+            
+            <Link
+            href='#'
+            >
+            <Box
+            position='relative'
+            w={{base: '70vw', md: '52.5vw'}}
+            h={{base: '40vw', md: '30vw'}}
+            minW='420px'
+            minH='240px'
+            border='15px solid white'
+            boxShadow='0 17px 56px rgba(125,127,129,.17)'
+            borderRadius='5px'
+            ml={8}
+            mt={8}
+            overflow='hidden'
+            >
+                <Image src={i.imgSrc} />
+                    <Flex
+                    justifyContent='center'
+                    alignItems='center'
+                    position='absolute'
+                    opacity='0'
+                    top='0'
+                    left='0'
+                    w={{base: '70vw', md: '52.5vw'}}
+                    h={{base: '40vw', md: '30vw'}}
+                    minW='420px'
+                    minH='240px'
+                    zIndex='2'
+                    backgroundColor='accentTrans'
+                    transition='0.3s ease all'
+                    _hover={{opacity: '1', transition: '0.3s ease all'}}
+                    >
+                        <ButtonOverlay text='visit demo' />
+                    </Flex>
+                </Box>
+            </Link>
+        </Flex>
+
+        ))
+    }
+
+
+const ButtonOverlay = ({ text }) => (
+    <Button
+    fontFamily='themeMono'
+    backgroundColor='white'
+    border='1px solid'
+    borderColor='main'
+    color='main'
+    fontSize={{base: '0.8rem', md:'1rem'}}
+    fontWeight='400'
+    py={{base: 4, md: 6}}
+    px={{base: 6, md: 8}}
+    >
+        {text}
+    </Button>
+)
+
+const SmallButton = ({ text, icon }) => {
+    const hoverButtonBg = useColorModeValue('white', 'themeBlack')
+    return (
+        <Button
+        leftIcon={icon}
+        fontFamily='themeMono'
+        fontSize={{base: '0.8rem', md:'1rem'}}
+        fontWeight='400'
+        backgroundColor='main'
+        border='2px solid'
+        borderColor='main'
+        color='white'
+        _hover={{backgroundColor: hoverButtonBg, color: 'main'}}
+        h='2.5rem'
+        w='7rem'
+        mt={4}
+        >
+            {text}
+        </Button>
+    )
+}

@@ -14,7 +14,7 @@ const Hero = () => {
             fontFamily='themeMono'
             fontSize='1.4rem'
             >
-                Hi! 🥑
+                hi! 👋
             </Text>
 
             <Heading1 text="I'm Joel Milani. <br /> I Make Websites and Other Things." />
@@ -23,22 +23,22 @@ const Hero = () => {
             fontFamily='themeMono'
             fontSize={{base: '1.1rem', md: '1.4rem'}}
             >
-                I'm a frontend developer in Lakewood, Ohio. Get in touch if you'd like to work together.
+                i'm a frontend developer in lakewood, ohio. get in touch if you'd like to work together.
             </Text>
 
             <Button
             fontFamily='themeMono'
             backgroundColor={buttonBg}
             border='2px solid'
-            borderColor='mainBlue'
-            color='lightBlue'
+            borderColor='main'
+            color='main'
             py={8}
             px={16}
             mt={8}
-            _hover={{backgroundColor: 'mainBlue', color: '#fff'}}
+            _hover={{backgroundColor: 'main', color: '#fff'}}
             
             >
-                Let's Chat!
+                let's chat!
             </Button>
         </>
     )

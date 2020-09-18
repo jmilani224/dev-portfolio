@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
             as='main'
             pt='5rem'
             pl={{base: 4, md: '9rem'}}
-            pr={{base: 4, md: '6rem'}}
+            pr={{base: 4, md: '4rem'}}
             >
                 {children}
             </Box>
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
                 w={0}
                 mt={10}
                 borderLeft="3px solid"
-                borderColor="mainBlue"
+                borderColor="main"
                 />
             </Flex>
         </>

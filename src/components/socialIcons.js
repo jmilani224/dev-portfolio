@@ -15,7 +15,7 @@ const SocialIcons = () => {
                 transition="0.3s ease all"
                 boxSize={5}
                 color={iconColor}
-                _hover={{color: "mainBlue", transform: "translateY(-3px)", transition: "0.3s ease all"}}
+                _hover={{color: "main", transform: "translateY(-3px)", transition: "0.3s ease all"}}
                 />
             </Link>
             
@@ -24,7 +24,7 @@ const SocialIcons = () => {
                 transition="0.3s ease all"
                 boxSize={5}
                 color={iconColor}
-                _hover={{color: "mainBlue", transform: "translateY(-3px)", transition: "0.3s ease all"}}
+                _hover={{color: "main", transform: "translateY(-3px)", transition: "0.3s ease all"}}
                 />
             </Link>
             
@@ -33,7 +33,7 @@ const SocialIcons = () => {
                 transition="0.3s ease all"
                 boxSize={5}
                 color={iconColor}
-                _hover={{color: "mainBlue", transform: "translateY(-3px)", transition: "0.3s ease all"}}
+                _hover={{color: "main", transform: "translateY(-3px)", transition: "0.3s ease all"}}
                 />
             </Link>
     

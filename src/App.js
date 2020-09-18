@@ -7,7 +7,7 @@ import theme from '@chakra-ui/theme';
 import { merge } from "@chakra-ui/utils"
 import Layout from './components/layout'
 import Hero from './components/hero';
-import { Work } from './work';
+import { Work } from './components/work'
 
 export const customTheme = merge(theme, {
   fonts: {
@@ -15,8 +15,9 @@ export const customTheme = merge(theme, {
     heading: "'Tinos', serif",
   },
   colors: {
-    mainBlue: '#5393fe',
-    lightBlue: '#73abff',
+    main: '#635bff',
+    accent: '#5cb4ff',
+    accentTrans: '#5cb4ffba',
     themeBlack: '#1A202C'
   }
 })

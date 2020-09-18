@@ -42,7 +42,7 @@ const Logo = () => {
         <Box
         h="51px"
         w="60px"
-        bgColor="mainBlue"
+        bgColor="main"
         borderRadius="5px"
         paddingTop="20px"
         paddingLeft="10px"
@@ -50,11 +50,11 @@ const Logo = () => {
         color="#fff"
         fontSize="1.1rem"
         fontWeight="bold"
-        _hover={{bgColor: '#ff8075'}}
+        _hover={{bgColor: 'accent'}}
         cursor="pointer"
         transition="0.2s all ease"
         >
-            J
+            jm
         </Box>
     )
 }
@@ -62,11 +62,11 @@ const Logo = () => {
 const Nav = () => {
     const navItems = [
         {
-            name: 'Work',
+            name: 'work',
             href: '#'
         },
         {
-            name: 'Contact',
+            name: 'contact',
             href: '#'
         },
     ]
