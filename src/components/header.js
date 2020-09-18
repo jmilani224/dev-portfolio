@@ -66,10 +66,6 @@ const Nav = () => {
             href: '#'
         },
         {
-            name: 'Bookshelf',
-            href: '#'
-        },
-        {
             name: 'Contact',
             href: '#'
         },

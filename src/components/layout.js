@@ -12,8 +12,8 @@ const Layout = ({ children }) => {
             <Box
             as='main'
             pt='5rem'
-            px={{base: 4, md: '8rem'}}
-            h="200vh"
+            pl={{base: 4, md: '9rem'}}
+            pr={{base: 4, md: '6rem'}}
             >
                 {children}
             </Box>
