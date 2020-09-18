@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
             <Box
             as='main'
             pt='5rem'
+            w='100vw'
             pl={{base: 4, md: '9rem'}}
             pr={{base: 4, md: '4rem'}}
             >
