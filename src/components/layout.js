@@ -18,6 +18,8 @@ const Layout = ({ children }) => {
                 {children}
             </Box>
 
+            <Footer />
+
             <Flex
             position="fixed"
             left={16}
@@ -26,6 +28,14 @@ const Layout = ({ children }) => {
             flexDirection="column"
             display={{base: 'none', md: 'flex'}}
             >
+                <Box
+                h={10}
+                w={0}
+                mb={10}
+                borderLeft="3px solid"
+                borderColor="main"
+                />
+
                 <SocialIcons />
 
                 <Box
@@ -41,3 +51,15 @@ const Layout = ({ children }) => {
 }
 
 export default Layout
+
+
+const Footer = () => (
+    <Box
+    h={16}
+    w='100vw'
+    mt={8}
+    backgroundColor='main'
+    >
+
+    </Box>
+)

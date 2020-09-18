@@ -40,18 +40,17 @@ const Logo = () => {
 
     return (
         <Box
-        h="51px"
-        w="60px"
-        bgColor="main"
+        h="55px"
+        w="65px"
+        border="2px solid"
+        borderColor="main"
         borderRadius="5px"
         paddingTop="20px"
         paddingLeft="10px"
         fontFamily="themeMono"
-        color="#fff"
+        color="main"
         fontSize="1.1rem"
-        fontWeight="bold"
-        _hover={{bgColor: 'accent'}}
-        cursor="pointer"
+        //fontWeight="bold"
         transition="0.2s all ease"
         >
             jm
