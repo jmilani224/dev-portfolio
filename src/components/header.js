@@ -63,7 +63,7 @@ const Nav = () => {
     const navItems = [
         {
             name: 'work',
-            href: '#'
+            href: '#work'
         },
         {
             name: 'contact',

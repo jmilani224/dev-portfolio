@@ -7,7 +7,7 @@ import redRadish from '../images/redradish.jpg'
 export const projects = [
     {
         name: 'practical renovations',
-        desc: 'a local renovation company website, with contact form, programmatically generated pages & page sections, and connected to prismic cms for easy content entry.',
+        desc: 'a local home renovation company website, with contact form, photo galleries, programmatically generated pages & page sections, and connected to prismic cms for easy content entry.',
         live: 'https://practicalreno.com/',
         gitHub: 'https://github.com/jmilani224/practical-renovations',
         tools: ['gatsby', 'react', 'chakra ui', 'prismic cms'],

@@ -5,14 +5,13 @@ import { GithubIcon, LinkIcon } from '../svgs/icons'
 import { projects } from '../data/projects.js'
 
 export const Work = () => {
-    console.log(projects)
     return (
         <>
         <Box h={24} />
-        <Heading1 text='Selected Projects' />
+        
+        <Heading1 id='work' text='Selected Projects' />
 
         <ProjectInfo />
-
 
         </>
     )
@@ -23,8 +22,9 @@ const ProjectInfo = () => {
     return projects.map(i => (
 
         <Flex
+        key={i.name}
         direction={{base: "column", lg: "row"}}
-        my={24}
+        mt={24}
         alignItems='center'
         justifyContent='space-between'
         >
@@ -46,12 +46,10 @@ const ProjectInfo = () => {
                     {i.desc}
                 </Text>
 
-                <Link href={i.live}>
-                    <SmallButton text='demo' icon={<LinkIcon />} />
-                </Link>
-                <Link href={i.gitHub}>
-                    <SmallButton text='github' icon={<GithubIcon />} />
-                </Link>
+                
+                    <SmallButton text='demo' icon={<LinkIcon />} href={i.live}/>
+                
+                    <SmallButton text='github' icon={<GithubIcon />} href={i.gitHub}/>
 
                 <Text
                 fontWeight='600'
@@ -59,7 +57,7 @@ const ProjectInfo = () => {
                 fontFamily='themeMono'
                 mt={12}
                 >
-                    toolbox
+                    stack
                 </Text>
                 <Flex
                 direction='row'
@@ -67,6 +65,7 @@ const ProjectInfo = () => {
                 >
                     {i.tools.map(x => (
                     <Text
+                    key={x}
                     mr={6}
                     fontWeight='400'
                     fontSize='0.8rem'
@@ -133,12 +132,13 @@ const ButtonOverlay = ({ text }) => (
     fontWeight='400'
     py={{base: 4, md: 6}}
     px={{base: 6, md: 8}}
+    _hover={{backgroundColor: 'white'}}
     >
         {text}
     </Button>
 )
 
-const SmallButton = ({ text, icon }) => {
+const SmallButton = ({ text, icon, href }) => {
     const hoverButtonBg = useColorModeValue('white', 'themeBlack')
     return (
         <Button
@@ -154,8 +154,10 @@ const SmallButton = ({ text, icon }) => {
         h='2.5rem'
         w='7rem'
         mt={4}
+        onClick={() => window.location.href = href}
         >
             {text}
+            
         </Button>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-    Text, Button, useColorModeValue
+    Text, Button, useColorModeValue, Box
 } from '@chakra-ui/core'
 import { Heading1 } from './headings'
 
@@ -9,7 +9,7 @@ const Hero = () => {
     const buttonBg = useColorModeValue("#fff", "themeBlack")
 
     return (
-        <>
+        <Box pl={12}>
             <Text
             fontFamily='themeMono'
             fontSize='1.4rem'
@@ -40,7 +40,7 @@ const Hero = () => {
             >
                 let's chat!
             </Button>
-        </>
+        </Box>
     )
 }
 
