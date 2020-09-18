@@ -9,7 +9,7 @@ const Hero = () => {
     const buttonBg = useColorModeValue("#fff", "themeBlack")
 
     return (
-        <Box pl={12}>
+        <Box pl={{base: 4, md: 12}}>
             <Text
             fontFamily='themeMono'
             fontSize='1.4rem'
