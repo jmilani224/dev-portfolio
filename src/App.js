@@ -7,6 +7,7 @@ import theme from '@chakra-ui/theme';
 import { merge } from "@chakra-ui/utils"
 import Layout from './components/layout'
 import Hero from './components/hero';
+import { Work } from './work';
 
 export const customTheme = merge(theme, {
   fonts: {
@@ -20,8 +21,6 @@ export const customTheme = merge(theme, {
   }
 })
 
-console.log(customTheme.colors.mainBlue)
-
 function App() {
   return (
     <ChakraProvider theme={customTheme}>
@@ -30,6 +29,8 @@ function App() {
       <Layout>
 
         <Hero />
+
+        <Work />
 
       </Layout>
 

@@ -16,7 +16,7 @@ const Header = () => {
             justifyContent="space-between"
             alignItems='center'
             pt={6}
-            px={16}
+            px={{base: 6, md: 16}}
 
             >
             
@@ -63,28 +63,28 @@ const Nav = () => {
     const navItems = [
         {
             name: 'Work',
-            href: '/'
+            href: '#'
         },
         {
             name: 'Bookshelf',
-            href: '/'
+            href: '#'
         },
         {
             name: 'Contact',
-            href: '/'
+            href: '#'
         },
     ]
 
     return (
         <List
         fontFamily="themeMono"
-        pr={10}
+        pr={{base: 4, md: 8, lg: 12}}
         >
         {navItems.map(i => (
             <Link
             key={i}
             href={i.href}
-            ml={8}
+            ml={{base: 4, md: 8, lg: 12}}
             >
                 <ListItem
                 display="inline-block"

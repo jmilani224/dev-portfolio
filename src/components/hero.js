@@ -2,11 +2,11 @@ import React from 'react'
 import {
     Text, Button, useColorModeValue
 } from '@chakra-ui/core'
-
+import { Heading1 } from './headings'
 
 const Hero = () => {
     
-    const buttonBg = useColorModeValue("#ffffffeb", "#1A202C")
+    const buttonBg = useColorModeValue("#fff", "themeBlack")
 
     return (
         <>
@@ -17,22 +17,13 @@ const Hero = () => {
                 Hi! 🥑
             </Text>
 
-            <Text
-            fontFamily='heading'
-            fontSize='5.35rem'
-            lineHeight='5rem'
-            letterSpacing='-1px'
-            py='2rem'
-            >
-                I'm Joel Milani. <br />
-                I Make Websites and Other Things.
-            </Text>
+            <Heading1 text="I'm Joel Milani. <br /> I Make Websites and Other Things." />
 
             <Text
             fontFamily='themeMono'
-            fontSize='1.4rem'
+            fontSize={{base: '1.1rem', md: '1.4rem'}}
             >
-                I'm a frontend developer in Lakewood, Ohio. Get in touch if you'd like to work together - I'm open to freelance projects and full-time opportunities.
+                I'm a frontend developer in Lakewood, Ohio. Get in touch if you'd like to work together.
             </Text>
 
             <Button
@@ -43,8 +34,8 @@ const Hero = () => {
             color='lightBlue'
             py={8}
             px={16}
-            _hover={{backgroundColor: 'mainBlue', color: '#fff'}}
             mt={8}
+            _hover={{backgroundColor: 'mainBlue', color: '#fff'}}
             
             >
                 Let's Chat!
