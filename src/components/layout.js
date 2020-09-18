@@ -3,6 +3,7 @@ import Header from './header'
 import { Box, Flex } from '@chakra-ui/core'
 import './layout.css'
 import SocialIcons from './socialIcons'
+import Logo from './logo'
 
 const Layout = ({ children }) => {
     return (
@@ -39,7 +40,7 @@ const Layout = ({ children }) => {
                 <SocialIcons />
 
                 <Box
-                h={16}
+                h={24}
                 w={0}
                 mt={10}
                 borderLeft="3px solid"
@@ -54,12 +55,14 @@ export default Layout
 
 
 const Footer = () => (
-    <Box
-    h={16}
+    <Flex
+    h={24}
     w='100vw'
     mt={8}
     backgroundColor='main'
+    justifyContent='center'
+    alignItems='center'
     >
-
-    </Box>
+        <Logo color='#fff' />
+    </Flex>
 )

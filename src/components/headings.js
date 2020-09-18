@@ -12,7 +12,8 @@ export const Heading1 = ({ id, text }) => {
             fontSize={{base: '3rem', md:'5.35rem'}}
             lineHeight={{base: '3rem', md:'5rem'}}
             letterSpacing='-1px'
-            py='2rem'
+            pt='2rem'
+            pb='1rem'
             dangerouslySetInnerHTML={{__html: text}}
             />
     )

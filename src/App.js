@@ -16,8 +16,8 @@ export const customTheme = merge(theme, {
   },
   colors: {
     main: '#635bff',
-    accent: '#5cb4ff',
-    accentTrans: '#5cb4ffba',
+    accent: '#b1f5b7',
+    accentTrans: '#b1f5b7ba',
     themeBlack: '#1A202C'
   }
 })

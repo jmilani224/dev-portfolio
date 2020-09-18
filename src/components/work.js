@@ -24,7 +24,7 @@ const ProjectInfo = () => {
         <Flex
         key={i.name}
         direction={{base: "column", lg: "row"}}
-        mt={24}
+        mt={12}
         alignItems='center'
         justifyContent='space-between'
         >
@@ -83,15 +83,13 @@ const ProjectInfo = () => {
             >
             <Box
             position='relative'
-            w={{base: '70vw', md: '52.5vw'}}
-            h={{base: '40vw', md: '30vw'}}
-            minW='420px'
-            minH='240px'
+            w={{base: '90vw', md: '52.5vw'}}
+            h={{base: '53vw', md: '30vw'}}
             border='15px solid white'
             boxShadow='0 17px 56px rgba(125,127,129,.17)'
             borderRadius='5px'
-            ml={8}
-            mt={8}
+            ml={{base: 0, md: 8}}
+            mt={10}
             overflow='hidden'
             >
                 <Image src={i.imgSrc} />
@@ -102,10 +100,8 @@ const ProjectInfo = () => {
                     opacity='0'
                     top='0'
                     left='0'
-                    w={{base: '70vw', md: '52.5vw'}}
-                    h={{base: '40vw', md: '30vw'}}
-                    minW='420px'
-                    minH='240px'
+                    w={{base: '90vw', md: '52.5vw'}}
+                    h={{base: '53vw', md: '30vw'}}
                     zIndex='2'
                     backgroundColor='accentTrans'
                     transition='0.3s ease all'

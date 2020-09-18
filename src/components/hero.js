@@ -36,7 +36,7 @@ const Hero = () => {
             px={16}
             mt={8}
             _hover={{backgroundColor: 'main', color: '#fff'}}
-            
+            onClick={() => window.location.href = 'mailto:jmilani224@gmail.com'}
             >
                 let's chat!
             </Button>

@@ -1,12 +1,12 @@
 import React from 'react'
 import {
-    Box,
     List,
     ListItem,
     Link,
     Flex
 } from '@chakra-ui/core'
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
+import Logo from '../components/logo.js'
 
 
 const Header = () => {
@@ -20,7 +20,7 @@ const Header = () => {
 
             >
             
-                <Logo />
+                <Logo color='main' />
 
                 <Flex alignItems='center'>
 
@@ -36,28 +36,6 @@ const Header = () => {
 }
 export default Header
 
-const Logo = () => {
-
-    return (
-        <Box
-        h="55px"
-        w="65px"
-        border="2px solid"
-        borderColor="main"
-        borderRadius="5px"
-        paddingTop="20px"
-        paddingLeft="10px"
-        fontFamily="themeMono"
-        color="main"
-        fontSize="1.1rem"
-        //fontWeight="bold"
-        transition="0.2s all ease"
-        >
-            jm
-        </Box>
-    )
-}
-
 const Nav = () => {
     const navItems = [
         {
@@ -66,7 +44,7 @@ const Nav = () => {
         },
         {
             name: 'contact',
-            href: '#'
+            href: 'mailto:jmilani224@gmail.com'
         },
     ]
 

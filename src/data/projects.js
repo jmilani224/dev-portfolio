@@ -39,10 +39,10 @@ export const projects = [
     },
     {
         name: 'redradish.app',
-        desc: 'single page application that shows nearby farmers markets based on zip code.',
+        desc: 'find nearby farmers markets by entering your zip code.',
         live: 'https://redradish.app/',
         gitHub: 'https://github.com/jmilani224/farmers-market',
-        tools: ['html', 'css', 'javascript'],
+        tools: ['html', 'css', 'javascript', 'vegetables!'],
         imgSrc: redRadish,
     },
 ]
