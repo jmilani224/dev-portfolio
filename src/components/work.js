@@ -80,7 +80,7 @@ const ProjectInfo = () => {
             </Flex>
             
             <Link
-            href='#'
+            href={i.live}
             >
             <Box
             position='relative'
