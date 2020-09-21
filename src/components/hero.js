@@ -22,6 +22,7 @@ const Hero = () => {
             <Text
             fontFamily='themeMono'
             fontSize={{base: '1.1rem', md: '1.4rem'}}
+            mt={6}
             >
                 i'm a frontend developer in lakewood, ohio. get in touch if you'd like to work together.
             </Text>
