@@ -32,7 +32,7 @@ const Hero = () => {
             border='2px solid'
             borderColor='main'
             color='main'
-            py={8}
+            h={16}
             px={16}
             mt={8}
             _hover={{backgroundColor: 'main', color: '#fff'}}

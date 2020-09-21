@@ -23,7 +23,7 @@ const ProjectInfo = () => {
 
         <Flex
         key={i.name}
-        direction={{base: "column", lg: "row"}}
+        direction={{base: "column", md: "row"}}
         mt={12}
         alignItems='center'
         justifyContent='space-between'
@@ -39,6 +39,10 @@ const ProjectInfo = () => {
                 >
                     {i.name}
                 </Heading>
+
+                <Box display={{base: 'block', md: 'none'}}>
+                    <ScreenShot href={i.live} imgSrc={i.imgSrc} />
+                </Box>
 
                 <Text
                 fontFamily='themeMono'
@@ -79,39 +83,10 @@ const ProjectInfo = () => {
                 </Flex>
             </Flex>
             
-            <Link
-            href={i.live}
-            >
-            <Box
-            position='relative'
-            w={{base: '90vw', md: '52.5vw'}}
-            h={{base: '53vw', md: '30vw'}}
-            border='15px solid white'
-            boxShadow='0 17px 56px rgba(125,127,129,.17)'
-            borderRadius='5px'
-            ml={{base: 0, md: 8}}
-            mt={10}
-            overflow='hidden'
-            >
-                <Image src={i.imgSrc} />
-                    <Flex
-                    justifyContent='center'
-                    alignItems='center'
-                    position='absolute'
-                    opacity='0'
-                    top='0'
-                    left='0'
-                    w={{base: '90vw', md: '52.5vw'}}
-                    h={{base: '53vw', md: '30vw'}}
-                    zIndex='2'
-                    backgroundColor='accentTrans'
-                    transition='0.3s ease all'
-                    _hover={{opacity: '1', transition: '0.3s ease all'}}
-                    >
-                        <ButtonOverlay text='visit demo' />
-                    </Flex>
-                </Box>
-            </Link>
+
+            <Box display={{base: 'none', md: 'block'}}>
+                    <ScreenShot href={i.live} imgSrc={i.imgSrc} />
+            </Box>
         </Flex>
 
         ))
@@ -127,7 +102,7 @@ const ButtonOverlay = ({ text }) => (
     color='main'
     fontSize={{base: '0.8rem', md:'1rem'}}
     fontWeight='400'
-    py={{base: 4, md: 6}}
+    h={{base: 10, md: 12}}
     px={{base: 6, md: 8}}
     _hover={{backgroundColor: 'white'}}
     >
@@ -158,3 +133,40 @@ const SmallButton = ({ text, icon, href }) => {
         </Button>
     )
 }
+
+const ScreenShot = ({ href, imgSrc }) => (
+    <Link
+    href={href}
+    >
+    <Box
+    position='relative'
+    w={{base: '90vw', md: '52.5vw'}}
+    h={{base: '53vw', md: '30vw'}}
+    border='15px solid white'
+    boxShadow='0 17px 56px rgba(125,127,129,.17)'
+    borderRadius='5px'
+    ml={{base: 0, md: 8}}
+    mt={{base: 0, md: 10}}
+    mb={{base: 4, md: 0}}
+    overflow='hidden'
+    >
+        <Image src={imgSrc} />
+            <Flex
+            justifyContent='center'
+            alignItems='center'
+            position='absolute'
+            opacity='0'
+            top='0'
+            left='0'
+            w={{base: '90vw', md: '52.5vw'}}
+            h={{base: '53vw', md: '30vw'}}
+            zIndex='2'
+            backgroundColor='accentTrans'
+            transition='0.3s ease all'
+            _hover={{opacity: '1', transition: '0.3s ease all'}}
+            >
+                <ButtonOverlay text='visit demo' />
+            </Flex>
+        </Box>
+    </Link>
+)
