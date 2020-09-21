@@ -34,7 +34,7 @@ const ProjectInfo = () => {
                 <Heading
                 as='h2'
                 fontFamily='themeMono'
-                fontSize='2rem'
+                fontSize={{base: '1.7rem', md: '2rem'}}
                 mb={8}
                 >
                     {i.name}
@@ -59,7 +59,7 @@ const ProjectInfo = () => {
                 fontWeight='600'
                 fontSize='0.8rem'
                 fontFamily='themeMono'
-                mt={12}
+                mt={8}
                 >
                     stack
                 </Text>
