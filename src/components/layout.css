@@ -4,3 +4,7 @@
 body ::selection {
     background: #b1f5b7;
 }
+
+.colorPicker {
+    opacity: 1;
+}

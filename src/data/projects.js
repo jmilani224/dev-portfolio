@@ -3,8 +3,18 @@ import emeraldRoom from '../images/emeraldroom.jpg'
 import palettable from '../images/palettable.jpg'
 import chakraUI from '../images/chakraui.jpg'
 import redRadish from '../images/redradish.jpg'
+import covidstats from '../images/covidstats.jpg'
+
 
 export const projects = [
+    {
+        name: 'covid-19 state stats',
+        desc: 'Easy to use data visualiztion showing COVID-19 statistics in states across the country.',
+        live: 'https://covid-state-stats.netlify.app/',
+        gitHub: 'https://github.com/jmilani224/covid-data',
+        tools: ['react', 'recharts'],
+        imgSrc: covidstats,
+    },
     {
         name: 'practical renovations',
         desc: 'a local home renovation company website, with contact form, photo galleries, programmatically generated pages & page sections, blog, and connected to prismic cms for easy content entry.',

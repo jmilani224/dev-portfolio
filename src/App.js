@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ChakraProvider,
   CSSReset,
@@ -9,25 +9,38 @@ import Layout from './components/layout'
 import Hero from './components/hero';
 import { Work } from './components/work'
 
-export const customTheme = merge(theme, {
-  fonts: {
-    themeMono: "Space Mono,monospace",
-    heading: "'Tinos', serif",
-  },
-  colors: {
-    main: '#635bff',
-    accent: '#b1f5b7',
-    accentTrans: '#b1f5b7ba',
-    themeBlack: '#1A202C'
-  }
-})
-
 function App() {
+
+  const [mainColor, setMainColor] = useState('#635bff');
+
+  const handleColor = e => {
+    setMainColor(e.target.value)
+  }
+
+  const ColorPicker = () => <input type="color" className='colorPicker' value={mainColor} onChange={handleColor} />
+
+  const colorPicker = (<ColorPicker />)
+
+  const customTheme = merge(theme, {
+    fonts: {
+      themeMono: "Space Mono,monospace",
+      heading: "'Tinos', serif",
+    },
+    colors: {
+      main: mainColor,
+      accent: '#b1f5b7',
+      accentTrans: '#b1f5b7ba',
+      themeBlack: '#1A202C'
+    }
+  })
+
   return (
     <ChakraProvider theme={customTheme}>
       <CSSReset />
 
-      <Layout>
+      <Layout
+      colorPicker={colorPicker}
+      >
 
         <Hero />
 
