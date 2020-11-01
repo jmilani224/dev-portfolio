@@ -27,7 +27,7 @@ const Header = ({ colorPicker}) => {
 
                     <ColorModeSwitcher />
 
-                    {colorPicker}
+                    {/* {colorPicker} */}
                     
                 </Flex>
 
