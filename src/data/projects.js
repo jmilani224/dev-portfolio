@@ -9,7 +9,7 @@ import covidstats from '../images/covidstats.jpg'
 export const projects = [
     {
         name: 'covid-19 state stats',
-        desc: 'Easy to use data visualiztion showing COVID-19 statistics in states across the country.',
+        desc: 'easy-to-use data visualiztion showing covid-19 statistics in states across the country.',
         live: 'https://covid-state-stats.netlify.app/',
         gitHub: 'https://github.com/jmilani224/covid-data',
         tools: ['react', 'recharts'],
