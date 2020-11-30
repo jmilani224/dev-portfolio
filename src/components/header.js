@@ -8,7 +8,7 @@ import {
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import Logo from '../components/logo.js'
 
-const Header = ({ colorPicker}) => {
+const Header = ({ colorPickerPackage }) => {
     return (
 
             <Flex
@@ -27,7 +27,7 @@ const Header = ({ colorPicker}) => {
 
                     <ColorModeSwitcher />
 
-                    {/* {colorPicker} */}
+                    {colorPickerPackage}
                     
                 </Flex>
 

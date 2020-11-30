@@ -1,5 +1,6 @@
 import React from 'react'
 import { createIcon } from "@chakra-ui/icon"
+import { FaBorderNone } from 'react-icons/fa'
 
 export const MailIcon = createIcon({
     displayName: "mailIcon",
@@ -32,3 +33,10 @@ export const MailIcon = createIcon({
     ),
   })
 
+  export const XIcon = createIcon({
+    displayName: "XIcon",
+    viewBox: "0 0 24 24",
+    path: (
+      <path  stroke='currentColor' stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    ),
+  })

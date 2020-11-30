@@ -5,11 +5,11 @@ import './layout.css'
 import SocialIcons from './socialIcons'
 import Logo from './logo'
 
-const Layout = ({ colorPicker, children }) => {
+const Layout = ({ colorPickerPackage, children }) => {
     return (
         <>
             <Header
-            colorPicker={colorPicker}
+            colorPickerPackage={colorPickerPackage}
             />
             
             <Box

@@ -8,18 +8,13 @@ import { merge } from "@chakra-ui/utils"
 import Layout from './components/layout'
 import Hero from './components/hero';
 import { Work } from './components/work'
+import ColorPickerPackage from './components/colorPicker';
 
 function App() {
 
   const [mainColor, setMainColor] = useState('#635bff');
 
-  const handleColor = e => {
-    setMainColor(e.target.value)
-  }
-
-  const ColorPicker = () => <input type="color" className='colorPicker' value={mainColor} onChange={handleColor} />
-
-  const colorPicker = (<ColorPicker />)
+  const colorPickerPackage = (<ColorPickerPackage mainColor={mainColor} setMainColor={setMainColor} />)
 
   const customTheme = merge(theme, {
     fonts: {
@@ -39,7 +34,7 @@ function App() {
       <CSSReset />
 
       <Layout
-      colorPicker={colorPicker}
+      colorPickerPackage={colorPickerPackage}
       >
 
         <Hero />
