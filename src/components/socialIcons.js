@@ -10,7 +10,7 @@ const SocialIcons = () => {
         <VStack
         spacing={10}
         >
-            <Link href="https://github.com/jmilani224">
+            <Link href="https://github.com/jmilani224" target="blank">
                 <GithubIcon
                 transition="0.3s ease all"
                 boxSize={5}
@@ -19,7 +19,7 @@ const SocialIcons = () => {
                 />
             </Link>
             
-            <Link href="https://codepen.io/jmilani224">
+            <Link href="https://codepen.io/jmilani224" target="blank">
                 <CodepenIcon
                 transition="0.3s ease all"
                 boxSize={5}
@@ -28,7 +28,7 @@ const SocialIcons = () => {
                 />
             </Link>
             
-            <Link href="mailto:jmilani224@gmail.com">
+            <Link href="mailto:jmilani224@gmail.com" target="blank">
                 <MailIcon
                 transition="0.3s ease all"
                 boxSize={5}

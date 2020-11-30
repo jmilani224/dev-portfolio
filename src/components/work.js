@@ -126,7 +126,7 @@ const SmallButton = ({ text, icon, href }) => {
         h='2.5rem'
         w='7rem'
         mt={4}
-        onClick={() => window.location.href = href}
+        onClick={() => window.open(href, "_blank") || window.location.replace(href)}
         >
             {text}
             
@@ -137,6 +137,7 @@ const SmallButton = ({ text, icon, href }) => {
 const ScreenShot = ({ href, imgSrc }) => (
     <Link
     href={href}
+    target="blank"
     >
     <Box
     position='relative'

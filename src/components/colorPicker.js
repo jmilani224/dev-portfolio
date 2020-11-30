@@ -38,10 +38,10 @@ const ColorPickerPackage = ({mainColor, setMainColor}) => {
     </Box>
     {colorPickerToggle && 
     <Box
-    position="absolute"
+    position="fixed"
     top={16}
     right={24}
-    overflow="visible"
+    zIndex="3"
     >
         <XIcon
         onClick={() => setColorPickerToggle(false)}
@@ -52,7 +52,7 @@ const ColorPickerPackage = ({mainColor, setMainColor}) => {
         position="relative"
         mb={-4}
         ml={-4}
-        zIndex="2"
+        zIndex="3"
         fill={xBg}
         />
         <ChromePicker
