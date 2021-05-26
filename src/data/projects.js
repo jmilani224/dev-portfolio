@@ -41,7 +41,7 @@ export const projects = [
     },
     {
         name: 'covid-19 state stats',
-        desc: 'easy-to-use data visualiztion showing covid-19 statistics in states across the country. **public api discontunied, will be updating to use static data**',
+        desc: 'easy-to-use data visualiztion showing covid-19 statistics in states across the country. **public api depricated, will be updating to use static data**',
         live: 'https://covid-state-stats.netlify.app/',
         gitHub: 'https://github.com/jmilani224/covid-data',
         tools: ['react', 'recharts'],
