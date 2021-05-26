@@ -1,9 +1,9 @@
 import practicalReno from '../images/practicalreno.jpg'
 import emeraldRoom from '../images/emeraldroom.jpg'
 import palettable from '../images/palettable.jpg'
-import chakraUI from '../images/chakraui.jpg'
 import redRadish from '../images/redradish.jpg'
 import covidstats from '../images/covidstats.jpg'
+import liverTox from '../images/livertox.jpg'
 
 
 export const projects = [
@@ -14,6 +14,14 @@ export const projects = [
         gitHub: 'https://github.com/jmilani224/practical-renovations',
         tools: ['gatsby', 'react', 'graphql', 'chakra ui', 'prismic cms'],
         imgSrc: practicalReno,
+    },
+    {
+        name: 'simple livertox',
+        desc: "a webscraping app made for my wife who works in medicine. it retrieves a specific online resource that's frequently pasted into patient charts and automatically copies the needed text to the clipboard. it saves a lot of time vs doing the process manually.",
+        live: 'https://liver-tox.com',
+        gitHub: 'https://github.com/jmilani224/liver-tox',
+        tools: ['nextjs', 'react', 'react query', 'cheerio', 'chakra ui'],
+        imgSrc: liverTox,
     },
     {
         name: 'emerald room salon',
