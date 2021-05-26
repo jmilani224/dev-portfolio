@@ -8,16 +8,8 @@ import covidstats from '../images/covidstats.jpg'
 
 export const projects = [
     {
-        name: 'covid-19 state stats',
-        desc: 'easy-to-use data visualiztion showing covid-19 statistics in states across the country.',
-        live: 'https://covid-state-stats.netlify.app/',
-        gitHub: 'https://github.com/jmilani224/covid-data',
-        tools: ['react', 'recharts'],
-        imgSrc: covidstats,
-    },
-    {
         name: 'practical renovations',
-        desc: 'a local home renovation company website, with contact form, photo galleries, programmatically generated pages & page sections, blog, and connected to prismic cms for easy content entry.',
+        desc: 'a local home renovation company website, with contact form, photo galleries, programmatically generated pages & page sections, blog, and connected to prismic headless cms for easy content management.',
         live: 'https://practicalreno.com/',
         gitHub: 'https://github.com/jmilani224/practical-renovations',
         tools: ['gatsby', 'react', 'graphql', 'chakra ui', 'prismic cms'],
@@ -25,7 +17,7 @@ export const projects = [
     },
     {
         name: 'emerald room salon',
-        desc: 'lakewood, ohio, hair salon website, with embedded booking widget, simple design, and uses netlify cms for easy content entry.',
+        desc: 'lakewood, ohio, hair salon website, with embedded booking widget, simple design, and uses netlify cms (a git-based headless cms) for easy content management.',
         live: 'https://emeraldroomsalon.com/',
         gitHub: 'https://github.com/jmilani224/emerald-room',
         tools: ['gatsby', 'react', 'graphql', 'netlify cms'],
@@ -40,12 +32,12 @@ export const projects = [
         imgSrc: palettable,
     },
     {
-        name: 'chakra ui "kitchen sink" component demo',
-        desc: 'addressed an open source issue by building a "kitchen sink" demo for all chakra ui components.',
-        live: 'https://chakra-ui-kitchen-sink.netlify.app/',
-        gitHub: 'https://github.com/jmilani224/chakra-kitchen-sink',
-        tools: ['gatsby', 'react', 'chakra ui'],
-        imgSrc: chakraUI,
+        name: 'covid-19 state stats',
+        desc: 'easy-to-use data visualiztion showing covid-19 statistics in states across the country. **public api discontunied, will be updating to use static data**',
+        live: 'https://covid-state-stats.netlify.app/',
+        gitHub: 'https://github.com/jmilani224/covid-data',
+        tools: ['react', 'recharts'],
+        imgSrc: covidstats,
     },
     {
         name: 'redradish.app',

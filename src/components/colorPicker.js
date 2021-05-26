@@ -20,7 +20,7 @@ const ColorPickerPackage = ({mainColor, setMainColor}) => {
     return (
     <>
     <Box
-    _hover={{background: hoverBg}}
+    _hover={{ background: hoverBg }}
     borderRadius="0.25rem"
     h={10}
     w={10}
